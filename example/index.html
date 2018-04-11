@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JointerJS</title>
+
+    <script src="jquery.min.js"></script>
+    <script src="jointer.min.js"></script>
+
+    <style>
+        .fromContainer {
+            height: 100px;
+            width: 100px;
+            background-color: grey;
+            text-align: center;
+            color: #fff;
+            font-family: Arial;
+        }
+
+        .toContainer {
+            height: 100px;
+            width: 100px;
+            background-color: salmon;
+            text-align: center;
+            color: #fff;
+            font-family: Arial;
+        }
+    </style>
+    <script type="text/javascript">
+
+        $(function() {
+
+            var jointer = new $().jointer();
+            jointer.connectElements('#from1', '#target1');
+            jointer.connectElements('#from2', '#target1');
+            jointer.connectElements('#from3', '#target1');
+            jointer.connectElements('#from4', '#target1');
+
+            var jointer2 = new $().jointer('black','red', true);
+            jointer2.connectElements('#from2', '#from4');
+            jointer2.connectElements('#from3', '#from1');
+
+            $('#target1').on('click', () => {
+                jointer.clearAllConnection();
+            });
+
+            $('#from1').on('click', () => {
+                jointer.clearConnection('#from1');
+            });
+        });
+
+    </script>
+</head>
+<body>
+    <div class="fromContainer" id="from1" style="position: absolute; top: 100px; left: 100px;">
+        <p>From</p>
+        <p>id = from1</p>
+    </div>
+    <div class="fromContainer" id="from2" style="position: absolute; top: 100px; left: 600px;">
+        <p>From</p>
+        <p>id = from2</p>
+    </div>
+    <div class="fromContainer" id="from3" style="position: absolute; top: 400px; left: 100px;">
+        <p>From</p>
+        <p>id = from3</p>
+    </div>
+    <div class="fromContainer" id="from4" style="position: absolute; top: 400px; left: 600px;">
+        <p>From</p>
+        <p>id = from4</p>
+    </div>
+    <div class="toContainer" id="target1" style="position: absolute; top: 250px; left: 350px;">
+        <p>Target</p>
+        <p>id = target1</p>
+    </div>
+</body>
+</html>
