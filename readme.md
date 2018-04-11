@@ -1,10 +1,10 @@
-Simple jquery plugin to connection elements
+Simple jquery plugin to connect elements
 ===============
 
 # What can this program do ?
 
-Sometimes you need a simple plugin that can connection two html elements without canvas. Here is it.
-In the example folder, is a simple example how you can create and delete connections and work with jointerJSs
+Sometimes you need a simple plugin that can connect two html elements without canvas. Here is it.
+In the example folder, is a simple example how you can create and delete connections and work with jointerJS.
 
 
 ## create instance from jointerJs
@@ -34,7 +34,7 @@ The first element is your element where the connection comes from, the second is
 ```
 
 
-##remove connection from element
+## remove connection from element
 
 If you want to delete a connection from an element. You can just do it like follow.
 
